@@ -1,0 +1,20 @@
+#!/usr/bin/groovy
+@Library('jenkins-pipeline-library@release/3') _
+
+// See https://pipeline-doc.devops.jive.com/latest/tests/health_check/
+
+schedulePipeline {
+  metadata = [
+    slack: [
+      channel     : "#pipeline-default",
+      branchFilter: "master", //String or groovy regex pattern
+    ]
+  ]
+  schedule = '' // 'H/15 * * * *'
+  args = [
+    commonArgument: "This is an example of how to provide common configuration to the healthchecks."
+  ]
+  executions = [
+    [scriptPath: 'script@healthcheck/healthcheck.groovy'],
+  ]
+}

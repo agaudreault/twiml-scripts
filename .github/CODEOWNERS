@@ -1,0 +1,5 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# those owners will be requested for review when someone opens
+# a pull request.
+*       @ghost # TODO: change this to be the team that owns this repository e.g: @jive/dev-devops-tools

@@ -1,0 +1,6 @@
+---
+# Uncomment the following two line and update the values to the same one as your deployed application.
+# Whenever a Pull Request is closed, the following Tug Pods that has been scaled in will be scaled down.
+
+#- tugProject: 'dt'
+#  tugApp: 'example'

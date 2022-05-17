@@ -1,0 +1,22 @@
+#!/usr/bin/groovy
+
+/*
+This is a default smoke test v4 pipeline that does nothing.
+It is used to trigger smoke test after a deploy.
+This file is associated with the smoke-test pipeline in your v4 application.
+
+You can either feed a command for this pipeline or replace this file with your own Jenkinsfile definition
+
+Read the documentation on the v4 pipeline parameters here:
+https://pipeline-doc.devops.jive.com/latest/tests/smoke_test/
+
+To learn more about pipeline v4, you can read the confluence documentation at
+https://pipeline-doc.devops.jive.com
+*/
+
+@Library('jenkins-pipeline-library@release/3') _
+
+smokeTestPipeline {
+    slackChannel = "#pipeline-default" // make sure to change this
+    command = ''
+}
